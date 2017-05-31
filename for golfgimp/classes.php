@@ -25,21 +25,21 @@ class person {
 
     function setName($inputName){
         if (empty($inputName)){
-            throw new Exception('You must enter a name.');
+            throw new Exception('You have not entered a name ');
         }
         $this->name = $inputName;
     }
 
     function setEmail($inputEmail){
         if (empty($inputEmail)){
-            throw new Exception('You must enter an email.');
+            throw new Exception('You have not entered an email ');
         }
         $this->email = $inputEmail;
     }
 
     function setRole($inputRole){
         if (empty($inputRole)){
-            throw new Exception('You must enter a role.');
+            throw new Exception('You have not selected a role ');
         }
         $this->role = $inputRole;
     }
