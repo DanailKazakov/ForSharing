@@ -10,10 +10,10 @@
         </form>
         <br>
         <?php
-        $n = filter_input(INPUT_GET, "num", FILTER_SANITIZE_NUMBER_INT);
-        if (!empty($n) && $n > 0){
-            echo "<form method='post' name='contact'>";
-            $numEntries = $n;
+        $num = filter_input(INPUT_GET, "num", FILTER_SANITIZE_NUMBER_INT);
+        if (!empty($num) && $num > 0){
+            echo "<form method='post'>";
+            $numEntries = $num;
             for ($i = 0; $i<$numEntries; $i++){
                 echo    "<div>";
                 echo        "Name: <input type='text' name='name[]'  value='' >"; 
@@ -32,17 +32,13 @@
             include 'common.php';
             include 'classes.php';
             
-            if (!empty($_POST['name']) && !empty($_POST['email']) && !empty($_POST['role']) && 
-               (count($_POST['name']) == count($_POST['email']) && count($_POST['email']) == count($_POST['role']))){
-                   
+
+            
+            if (!empty($_POST['name']) && !empty($_POST['email']) && !empty($_POST['role'])){
+                
                 $names = $_POST['name'];
-                //print_r($names);
-
                 $emails = $_POST['email'];
-                //print_r($emails);
-
                 $roles = $_POST['role'];
-                //print_r($roles);
                 
                 $counter = count($_POST['name']);
                 
@@ -53,7 +49,7 @@
                         $person = new person($names[$i], $emails[$i], $roles[$i]);
                         array_push($arr, $person);
                     } catch (Exception $ex) {
-                        echo $ex->getMessage() . "<br>";
+                        echo $ex->getMessage() . "in entry $i.<br>";
                     }
                 }
                 
@@ -74,16 +70,7 @@
                         $stmt->close();
                     }
                 }
-                
-//                if ($stmt = $mysqli->prepare("SELECT name, email, role FROM persons")){
-//                    $stmt->execute();
-//                    $n; $e; $r;
-//                    $stmt->bind_result($n, $e, $r);
-//                    while($stmt->fetch()){
-//                        printf("%s | %s | %s<br>", $n, $e, $r);
-//                    }
-//                }
-                
+
                 $mysqli->close();
             }    
         ?>
