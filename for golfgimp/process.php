@@ -45,6 +45,12 @@
                 $arr = array();
                 
                 for ($i = 0; $i < $counter; $i++){
+                    $names[$i] = filter_var($names[$i], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH | FILTER_FLAG_STRIP_LOW);
+                    
+                    $emails[$i] = filter_var($emails[$i], FILTER_SANITIZE_EMAIL);
+                    
+                    $roles[$i] = filter_var($roles[$i], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH | FILTER_FLAG_STRIP_LOW);
+                    
                     try {
                         $person = new person($names[$i], $emails[$i], $roles[$i]);
                         array_push($arr, $person);
