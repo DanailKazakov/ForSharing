@@ -1,0 +1,9 @@
+c:\users\cybera\documents\visual studio 2015\Projects\WindowsFormsApplication1\TextConverter\bin\Debug\TextConverter.exe.config
+c:\users\cybera\documents\visual studio 2015\Projects\WindowsFormsApplication1\TextConverter\obj\Debug\TextConverter.Properties.Resources.resources
+c:\users\cybera\documents\visual studio 2015\Projects\WindowsFormsApplication1\TextConverter\obj\Debug\TextConverter.csproj.GenerateResource.Cache
+c:\users\cybera\documents\visual studio 2015\Projects\WindowsFormsApplication1\TextConverter\bin\Debug\TextConverter.exe
+c:\users\cybera\documents\visual studio 2015\Projects\WindowsFormsApplication1\TextConverter\bin\Debug\TextConverter.pdb
+c:\users\cybera\documents\visual studio 2015\Projects\WindowsFormsApplication1\TextConverter\obj\Debug\TextConverter.exe
+c:\users\cybera\documents\visual studio 2015\Projects\WindowsFormsApplication1\TextConverter\obj\Debug\TextConverter.pdb
+c:\users\cybera\documents\visual studio 2015\Projects\WindowsFormsApplication1\TextConverter\obj\Debug\TextConverter.csprojResolveAssemblyReference.cache
+c:\users\cybera\documents\visual studio 2015\Projects\WindowsFormsApplication1\TextConverter\obj\Debug\TextConverter.FormTitle.resources
